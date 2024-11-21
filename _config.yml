@@ -33,9 +33,9 @@ comments :
 
 # Internal nav
 nav:
-  - GALLERY: "https://em-twines.github.io/photorama/gallery/"  
-  - JOURNAL: "https://em-twines.github.io/photorama/journal/"
-  - ABOUT: "https://em-twines.github.io/photorama/about/"
+  - GALLERY: "https://em-twines.github.io/arts-website/gallery/"  
+  - JOURNAL: "https://em-twines.github.io/arts-website/journal/"
+  - ABOUT: "https://em-twines.github.io/arts-website/about/"
 
 # All translation keys
 translations:

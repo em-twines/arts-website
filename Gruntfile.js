@@ -1,14 +1,25 @@
 module.exports = function(grunt) {
-
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        connect: {
+            server: {
+                options: {
+                    port: 9000, // You can change the port if needed
+                    livereload: true, // Enable live reloading
+                    base: '.' // Serve files from the current directory
+                }
+            }
+        },
+
         uglify: {
             main: {
                 src: 'js/<%= pkg.name %>.js',
                 dest: 'js/<%= pkg.name %>.min.js'
             }
         },
+
         less: {
             expanded: {
                 options: {
@@ -28,11 +39,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         banner: '/*!\n' +
-            ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * <%= pkg.title || pkg.name %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+            ' * Licensed under <%= pkg.license %>\n' +
             ' */\n',
+
         usebanner: {
             dist: {
                 options: {
@@ -44,22 +57,23 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         watch: {
+            options: {
+                livereload: true // Enable live reloading
+            },
             scripts: {
                 files: ['js/<%= pkg.name %>.js'],
-                tasks: ['uglify'],
-                options: {
-                    spawn: false,
-                },
+                tasks: ['uglify']
             },
             less: {
                 files: ['less/*.less'],
-                tasks: ['less'],
-                options: {
-                    spawn: false,
-                }
+                tasks: ['less']
             },
-        },
+            all: {
+                files: ['**/*.html', '**/*.css', '**/*.js'] // Watch for changes in all files
+            }
+        }
     });
 
     // Load the plugins.
@@ -67,8 +81,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less', 'usebanner']);
-
+    grunt.registerTask('default', ['uglify', 'less', 'usebanner', 'connect', 'watch']);
 };
