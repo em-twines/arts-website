@@ -139,6 +139,12 @@ img.mfp-img { padding: 0; }
 	/*header smaller space*/
 	#header { padding-top: 2em; }
 
+/* Ensure content starts below fixed navbar */
+body.gallery #content {
+	padding-top: 80px;
+	min-height: calc(100vh - 80px);
+}
+
 	/*galleries adapted*/
 	.fullscreen-gallery .gallery-caption .entry-summary { padding-bottom: 2em; }
 	.masonry-gallery .gallery-item {width: 98% !important;}

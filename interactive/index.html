@@ -1,0 +1,90 @@
+---
+title: "Interactive"
+description: "Interactive Works"
+active: interactive
+items:
+  - image_path: /img/galleries/g01/bg1.jpg
+    title: "Project 1"
+    link: "/interactive/project1/"
+  - image_path: /img/galleries/g01/bg2.jpg
+    title: "Project 2"
+    link: "/interactive/project2/"
+  - image_path: /img/galleries/g01/bg3.jpg
+    title: "Project 3"
+    link: "/interactive/project3/"
+  - image_path: /img/galleries/g02/bg1.jpg
+    title: "Project 4"
+    link: "/interactive/project4/"
+  - image_path: /img/galleries/g02/bg2.jpg
+    title: "Project 5"
+    link: "/interactive/project5/"
+  - image_path: /img/galleries/g02/bg3.jpg
+    title: "Project 6"
+    link: "/interactive/project6/"
+---
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+    <link rel="stylesheet" href="{{ "/css/selena.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/galleries.css" | prepend: site.baseurl }}">
+</head>
+
+<body class="gallery">
+
+    {% include nav.html %}
+
+	<section id="content" role="main">
+		<div class="wrapper" style="padding-top: 25px; padding-left: 50px;">
+	
+			<h2>{{page.title}}</h2>
+			
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+				
+{% for item in page.items %}  	
+
+	               <figure class="gallery-item">
+                         <figure class="effect-selena">
+					<header class='gallery-icon'>
+		       
+<a href="{{ site.baseurl }}{{ item.link }}">
+<img src="{{ site.baseurl }}{{ item.image_path }}" alt="{{ item.title }}"></a>
+
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{item.title}}</h3>
+						</div>
+					</figcaption>
+                       </figure>
+				</figure>
+							
+{% endfor %}		
+				
+			</div>
+			
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+</body></html>

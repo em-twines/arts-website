@@ -1,21 +1,21 @@
 {
-  "name": "photorama",
+  "name": "arts-website",
   "version": "1.0.0",
-  "description": "Theme by [Start Bootstrap](http://startbootstrap.com/).",
+  "description": "Artist portfolio website",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sunbliss/photorama.git"
+    "url": "https://github.com/em-twines/arts-website.git"
   },
-  "author": "Anna Prigkipaki",
+  "author": "Emily Delbridge",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sunbliss/photorama/issues"
+    "url": "https://github.com/em-twines/arts-website/issues"
   },
-  "homepage": "http://sunbliss.github.io",
+  "homepage": "https://em-twines.github.io/arts-website",
   "dependencies": {
     "searchkit": "^0.7.0"
   },

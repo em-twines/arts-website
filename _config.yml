@@ -1,5 +1,5 @@
 # Site settings
-title: PHOTORAMA
+title: Portfolio
 email: ""
 description: "Photo Journal"
 url: "https://em-twines.github.io"
@@ -15,10 +15,10 @@ share: true
 
 # Owner/author information
 owner:
-  name:   Emily Delbridge
+  name: Emily Delbridge
   avatar: emily-twines-profile.png
   favicon: favicon.ico
-  info: Professional Arts Website
+  info: An artist's portfoio website
 
 # Settings for comments helper
 # Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
@@ -32,10 +32,12 @@ comments :
     short_name : ""
 
 # Internal nav
+# In development, these will use relative URLs; in production, they use full URLs
 nav:
-  - GALLERY: "https://em-twines.github.io/arts-website/gallery/"  
-  - JOURNAL: "https://em-twines.github.io/arts-website/journal/"
-  - ABOUT: "https://em-twines.github.io/arts-website/about/"
+  - INTERACTIVE: "/interactive/"  
+  - FILM: "/film/"  
+  - CRITICISM + TALKS: "/criticism/"
+  - ABOUT: "/about/"
 
 # All translation keys
 translations:

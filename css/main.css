@@ -1,8 +1,8 @@
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
-  color: #eee;
-  background-color: #000;
+  color: #000;
+  background-color: #fff;
 }
 p {
   line-height: 1.5;
@@ -21,13 +21,13 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #760824;
+  color: #0085a1;
   transition: color .4s;
   text-decorarion: none;
 }
 a:hover,
 a:focus {
-  color: #fff;
+  color: #005a6b;
      transition: color .3s;
     outline: none;
     text-shadow:none;
@@ -54,6 +54,25 @@ hr.small {
   left: 0;
   width: 100%;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 60px;
+}
+.navbar-custom .navbar-nav.navbar-right {
+  margin-top: 15px;
+  padding-top: 0;
+}
+.navbar-custom .navbar-nav.navbar-left {
+  margin-top: 15px;
+  padding-top: 0;
+}
+.navbar-custom .navbar-nav.navbar-left li a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 30px;
+}
+.navbar-custom .navbar-nav.navbar-right li a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 30px;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -61,9 +80,64 @@ hr.small {
 .navbar-custom .nav li a {
   color: white;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-shadow: 
+    -1px -1px 0 rgba(0, 0, 0, 0.8),
+    1px -1px 0 rgba(0, 0, 0, 0.8),
+    -1px 1px 0 rgba(0, 0, 0, 0.8),
+    1px 1px 0 rgba(0, 0, 0, 0.8),
+    0 0 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(255, 255, 255, 0.3),
+    1px -1px 2px rgba(255, 255, 255, 0.3),
+    -1px 1px 2px rgba(255, 255, 255, 0.3),
+    1px 1px 2px rgba(255, 255, 255, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.navbar-custom .nav li.active a {
+  color: black;
+  background-color: transparent !important;
+  text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.9),
+    1px -1px 0 rgba(255, 255, 255, 0.9),
+    -1px 1px 0 rgba(255, 255, 255, 0.9),
+    1px 1px 0 rgba(255, 255, 255, 0.9),
+    0 0 6px rgba(255, 255, 255, 1),
+    -2px -2px 0 rgba(255, 255, 255, 0.8),
+    2px -2px 0 rgba(255, 255, 255, 0.8),
+    -2px 2px 0 rgba(255, 255, 255, 0.8),
+    2px 2px 0 rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.navbar-custom .nav li.active a:hover {
+  color: black;
+  background-color: transparent !important;
+  text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.9),
+    1px -1px 0 rgba(255, 255, 255, 0.9),
+    -1px 1px 0 rgba(255, 255, 255, 0.9),
+    1px 1px 0 rgba(255, 255, 255, 0.9),
+    0 0 6px rgba(255, 255, 255, 1),
+    -2px -2px 0 rgba(255, 255, 255, 0.8),
+    2px -2px 0 rgba(255, 255, 255, 0.8),
+    -2px 2px 0 rgba(255, 255, 255, 0.8),
+    2px 2px 0 rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.navbar-custom .nav li a:hover {
+  color: white;
+  text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.8),
+    1px -1px 0 rgba(255, 255, 255, 0.8),
+    -1px 1px 0 rgba(255, 255, 255, 0.8),
+    1px 1px 0 rgba(255, 255, 255, 0.8),
+    0 0 4px rgba(255, 255, 255, 0.9),
+    -1px -1px 2px rgba(0, 0, 0, 0.3),
+    1px -1px 2px rgba(0, 0, 0, 0.3),
+    -1px 1px 2px rgba(0, 0, 0, 0.3),
+    1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
@@ -78,12 +152,68 @@ hr.small {
   .navbar-custom .navbar-brand:focus {
     color: #0085a1;
   }
+  .navbar-custom .navbar-nav.navbar-right {
+    margin-top: 0;
+  }
+  .navbar-custom .navbar-nav.navbar-left {
+    margin-top: 0;
+  }
+  .navbar-custom .navbar-nav.navbar-left li a {
+    padding: 20px;
+    line-height: normal;
+  }
+  .navbar-custom .navbar-nav.navbar-right li a {
+    padding: 20px;
+    line-height: normal;
+  }
   .navbar-custom .nav li a {
     color: white;
-    padding: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
   .navbar-custom .nav li a:hover{
-    color: #0085a1;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.8),
+      1px -1px 0 rgba(255, 255, 255, 0.8),
+      -1px 1px 0 rgba(255, 255, 255, 0.8),
+      1px 1px 0 rgba(255, 255, 255, 0.8),
+      0 0 4px rgba(255, 255, 255, 0.9),
+      -1px -1px 2px rgba(0, 0, 0, 0.3),
+      1px -1px 2px rgba(0, 0, 0, 0.3),
+      -1px 1px 2px rgba(0, 0, 0, 0.3),
+      1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .navbar-custom .nav li.active a {
+    color: black;
+    background-color: transparent !important;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.9),
+      1px -1px 0 rgba(255, 255, 255, 0.9),
+      -1px 1px 0 rgba(255, 255, 255, 0.9),
+      1px 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 6px rgba(255, 255, 255, 1),
+      -2px -2px 0 rgba(255, 255, 255, 0.8),
+      2px -2px 0 rgba(255, 255, 255, 0.8),
+      -2px 2px 0 rgba(255, 255, 255, 0.8),
+      2px 2px 0 rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .navbar-custom .nav li.active a:hover {
+    color: black;
+    background-color: transparent !important;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.9),
+      1px -1px 0 rgba(255, 255, 255, 0.9),
+      -1px 1px 0 rgba(255, 255, 255, 0.9),
+      1px 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 6px rgba(255, 255, 255, 1),
+      -2px -2px 0 rgba(255, 255, 255, 0.8),
+      2px -2px 0 rgba(255, 255, 255, 0.8),
+      -2px 2px 0 rgba(255, 255, 255, 0.8),
+      2px 2px 0 rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -116,8 +246,64 @@ hr.small {
     color: #0085a1;
   }
   
+  .navbar-custom.is-fixed .nav li a {
+    text-shadow: 
+      -1px -1px 0 rgba(0, 0, 0, 0.8),
+      1px -1px 0 rgba(0, 0, 0, 0.8),
+      -1px 1px 0 rgba(0, 0, 0, 0.8),
+      1px 1px 0 rgba(0, 0, 0, 0.8),
+      0 0 4px rgba(0, 0, 0, 0.9),
+      -1px -1px 2px rgba(255, 255, 255, 0.3),
+      1px -1px 2px rgba(255, 255, 255, 0.3),
+      -1px 1px 2px rgba(255, 255, 255, 0.3),
+      1px 1px 2px rgba(255, 255, 255, 0.3);
+  }
+  .navbar-custom.is-fixed .nav li a {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
   .navbar-custom.is-fixed .nav li a:hover {
-    color: #0085a1;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.8),
+      1px -1px 0 rgba(255, 255, 255, 0.8),
+      -1px 1px 0 rgba(255, 255, 255, 0.8),
+      1px 1px 0 rgba(255, 255, 255, 0.8),
+      0 0 4px rgba(255, 255, 255, 0.9),
+      -1px -1px 2px rgba(0, 0, 0, 0.3),
+      1px -1px 2px rgba(0, 0, 0, 0.3),
+      -1px 1px 2px rgba(0, 0, 0, 0.3),
+      1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .navbar-custom.is-fixed .nav li.active a {
+    color: black;
+    background-color: transparent !important;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.9),
+      1px -1px 0 rgba(255, 255, 255, 0.9),
+      -1px 1px 0 rgba(255, 255, 255, 0.9),
+      1px 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 6px rgba(255, 255, 255, 1),
+      -2px -2px 0 rgba(255, 255, 255, 0.8),
+      2px -2px 0 rgba(255, 255, 255, 0.8),
+      -2px 2px 0 rgba(255, 255, 255, 0.8),
+      2px 2px 0 rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .navbar-custom.is-fixed .nav li.active a:hover {
+    color: black;
+    background-color: transparent !important;
+    text-shadow: 
+      -1px -1px 0 rgba(255, 255, 255, 0.9),
+      1px -1px 0 rgba(255, 255, 255, 0.9),
+      -1px 1px 0 rgba(255, 255, 255, 0.9),
+      1px 1px 0 rgba(255, 255, 255, 0.9),
+      0 0 6px rgba(255, 255, 255, 1),
+      -2px -2px 0 rgba(255, 255, 255, 0.8),
+      2px -2px 0 rgba(255, 255, 255, 0.8),
+      -2px 2px 0 rgba(255, 255, 255, 0.8),
+      2px 2px 0 rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 .navbar-custom.is-fixed .nav li a:active{
     color: #6ec54d;
