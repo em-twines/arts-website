@@ -135,7 +135,7 @@ body.fullscreen #footer {
 
 @media screen and (max-width: 767px) {
   body.fullscreen .position-absolute {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
   body.fullscreen #footer {
     left: 0;
