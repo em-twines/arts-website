@@ -34,9 +34,10 @@ comments :
 # Internal nav
 # In development, these will use relative URLs; in production, they use full URLs
 nav:
-  - INTERACTIVE: "/interactive/"  
-  - FILM: "/film/"  
+  - INTERACTIVE: "/interactive/"
+  - FILM: "/film/"
   - CRITICISM + TALKS: "/criticism/"
+  - TECH: "/tech/"
   - ABOUT: "/about/"
 
 # All translation keys

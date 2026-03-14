@@ -1,0 +1,155 @@
+---
+title: "Tech"
+description: "Software Projects"
+active: tech
+---
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/galleries.css" | prepend: site.baseurl }}">
+  <style>
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .tech-card {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      width: calc(33.333% - 14px);
+      padding: 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .tech-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .tech-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.1em;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .tech-card p {
+      margin: 0 0 12px 0;
+      font-size: 0.9em;
+      color: #444;
+      line-height: 1.5;
+    }
+    .tech-card .tech-stack {
+      font-size: 0.75em;
+      color: #888;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+    .tech-card .tech-links a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #222;
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+      padding-bottom: 1px;
+    }
+    .tech-card .tech-links a:hover {
+      color: #EA8E00;
+      border-color: #EA8E00;
+    }
+    @media screen and (max-width: 900px) {
+      .tech-card { width: calc(50% - 10px); }
+    }
+    @media screen and (max-width: 540px) {
+      .tech-card { width: 100%; }
+    }
+  </style>
+</head>
+
+<body class="gallery">
+
+  {% include nav.html %}
+
+  <section id="content" role="main">
+    <div class="wrapper gallery-wrapper">
+
+      <h2>{{ page.title }}</h2>
+      <p style="font-size: 0.9em; text-align: center; margin: 20px auto;">See Technical Website at <a href="https://em-twines.netlify.app/" target="_blank">em-twines.netlify.app</a></p>
+
+      <div class="tech-grid">
+
+        <div class="tech-card">
+          <img src="{{ site.baseurl }}/img/tech_samepage.webp" alt="Same Page">
+          <h3>Same Page</h3>
+          <p>An All-In-One PTO Management System</p>
+          <div class="tech-stack">React · Django REST · JWT · FullCalendar.io · MySQL · Python</div>
+          <div class="tech-links">
+            <a href="https://github.com/em-twines/same-page-time-tracker" target="_blank">GitHub</a>
+            <a href="https://youtu.be/jSsTco6omeE" target="_blank">Video</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="{{ site.baseurl }}/img/tech_tonetotint.webp" alt="Tone To Tint" style="object-fit: contain; background: #000;">
+          <h3>Tone To Tint</h3>
+          <p>An AI-driven Mood-to-Color Generator</p>
+          <div class="tech-stack">React · TypeScript · Tailwind · OpenAI</div>
+          <div class="tech-links">
+            <a href="https://github.com/em-twines/ToneToTint" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="{{ site.baseurl }}/img/tech_gamingcodex.webp" alt="The Gaming Codex">
+          <h3>The Gaming Codex</h3>
+          <p>Visualizations of a Game-based Dataset</p>
+          <div class="tech-stack">React · Java · Java Spring · Nintendo API</div>
+          <div class="tech-links">
+            <a href="https://github.com/GriffithT16/VideoGame_frontend" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="{{ site.baseurl }}/img/tech_vidio.webp" alt="Vid.io">
+          <h3>Vid.io</h3>
+          <p>A Music Streaming Site Utilizing YouTube's API</p>
+          <div class="tech-stack">React · Django REST · JWT · YouTube API · MySQL · Python</div>
+          <div class="tech-links">
+            <a href="https://github.com/em-twines/YoutubeClone" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="{{ site.baseurl }}/img/tech_memorycards.webp" alt="Memory Cards">
+          <h3>Memory Cards</h3>
+          <p>A Flashcards App</p>
+          <div class="tech-stack">React · Django REST · Python</div>
+          <div class="tech-links">
+            <a href="https://github.com/em-twines/flashcards" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- END .wrapper -->
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+
+</body>
+</html>
