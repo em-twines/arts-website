@@ -3,24 +3,24 @@ title: "Criticism + Talks"
 description: "Criticism and Talks"
 active: criticism + talks
 items:
-  - image_path: /img/galleries/g01/bg1.jpg
-    title: "Criticism 1"
-    link: "/criticism/criticism1/"
-  - image_path: /img/galleries/g01/bg2.jpg
-    title: "Criticism 2"
-    link: "/criticism/criticism2/"
-  - image_path: /img/galleries/g01/bg3.jpg
-    title: "Criticism 3"
-    link: "/criticism/criticism3/"
-  - image_path: /img/galleries/g02/bg1.jpg
-    title: "Criticism 4"
-    link: "/criticism/criticism4/"
-  - image_path: /img/galleries/g02/bg2.jpg
-    title: "Criticism 5"
-    link: "/criticism/criticism5/"
-  - image_path: /img/galleries/g02/bg3.jpg
-    title: "Criticism 6"
-    link: "/criticism/criticism6/"
+  - title: "The Resiliency of Hope in 'So Shines a Good Deed'"
+    link: "/criticism/resiliency-of-hope/"
+  - title: "'What it Means to Be Free': An Exploration through Verbatim Theatre"
+    link: "/criticism/what-it-means-to-be-free/"
+  - title: "The Adventurers of August"
+    link: "/criticism/adventurers-of-august/"
+  - title: "Myriad Design Charrette on the Preservation of Complex Digital-Born Artworks"
+    link: "/criticism/myriad-charrette/"
+  - title: "Symposium on Interactive Virtual Theatre"
+    link: "/criticism/symposium-virtual-theatre/"
+  - title: "OyeDrum Magazine Volume II Kickoff"
+    link: "/criticism/oyedrum-kickoff/"
+  - title: "Political Performance and the WTO Protests"
+    link: "/criticism/wto-protests/"
+  - title: "Invited Lecture on Max MSP"
+    link: "/criticism/maxmsp-lecture/"
+  - title: "Comparative Drama Conference"
+    link: "/criticism/comparative-drama-conference/"
 ---
 
 <!DOCTYPE html>
@@ -38,34 +38,56 @@ items:
     {% include nav.html %}
 
 	<section id="content" role="main">
-		<div class="wrapper" style="padding-top: 25px; padding-left: 50px;">
+		<div class="wrapper" style="padding-top: 65px; padding-left: 50px;">
 	
 			<h2>{{page.title}}</h2>
 			
-			<!-- Gallery __-->
-			<div class="gallery masonry-gallery">
-				
-{% for item in page.items %}  	
+			<style>
+			.card-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+				margin-top: 1.5em;
+			}
+			.card-item {
+				width: 30%;
+				box-sizing: border-box;
+			}
+			.card-item a {
+				display: block;
+				padding: 1.5em;
+				background: #fff;
+				border: 1px solid #222;
+				color: #222;
+				text-decoration: none;
+				transition: background 0.2s ease, color 0.2s ease;
+				height: 100%;
+			}
+			.card-item a:hover {
+				background: #222;
+				color: #fff;
+			}
+			.card-item h3 {
+				margin: 0;
+				font-size: 0.7em;
+				font-weight: bold;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			@media screen and (max-width: 640px) {
+				.card-item { width: 100%; }
+			}
+		</style>
 
-	               <figure class="gallery-item">
-                         <figure class="effect-selena">
-					<header class='gallery-icon'>
-		       
-<a href="{{ site.baseurl }}{{ item.link }}">
-<img src="{{ site.baseurl }}{{ item.image_path }}" alt="{{ item.title }}"></a>
-
-					</header>	
-					<figcaption class='gallery-caption'>
-						<div class="entry-summary">
-							<h3>{{item.title}}</h3>
-						</div>
-					</figcaption>
-                       </figure>
-				</figure>
-							
-{% endfor %}		
-				
+		<div class="card-grid">
+{% for item in page.items %}
+			<div class="card-item">
+				<a href="{{ site.baseurl }}{{ item.link }}">
+					<h3>{{ item.title }}</h3>
+				</a>
 			</div>
+{% endfor %}
+		</div>
 			
 		</div><!-- END .wrapper -->
 	</section>

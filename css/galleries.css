@@ -132,6 +132,11 @@ img.mfp-img { padding: 0; }
 .mfp-container button.mfp-arrow-left::before, .mfp-container button.mfp-arrow-left::after { display: none; }
 
 
+/* Padding below fixed navbar */
+body.gallery #content {
+	padding-top: 120px;
+}
+
      /*galleries adapted*/
 	.masonry-gallery .gallery-item { width: 30% !important; }
 		

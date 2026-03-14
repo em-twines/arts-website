@@ -60,7 +60,7 @@ categories_path: "/journal/category/"
 tags_path: "/journal/tag/"
 gems: 
  - jekyll-paginate
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["README.md"]
 
 # SiteMap
 sitemap:
