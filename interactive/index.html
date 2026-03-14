@@ -3,19 +3,19 @@ title: "Interactive"
 description: "Interactive Works"
 active: interactive
 items:
-  - image_path: /img/looking_glass_logo.jpg
+  - image_path: /img/looking_glass_logo.webp
     title: "lookingGlass"
     link: "/interactive/looking-glass/"
-  - image_path: /img/weeksville_snapshot.png
+  - image_path: /img/weeksville_snapshot.webp
     title: "I heard an echo"
     link: "/interactive/i-heard-an-echo/"
-  - image_path: /img/slider/on-progress.jpg
+  - image_path: /img/slider/on-progress.webp
     title: "'On Progress' With Professor Stewart Orwell Teric III"
     link: "/interactive/on-progress/"
-  - image_path: /img/slider/untwined.jpg
+  - image_path: /img/slider/untwined.webp
     title: "(Un)Twined"
     link: "/interactive/untwined/"
-  - image_path: /img/THM.png
+  - image_path: /img/THM.webp
     title: "The Heights Murders"
     link: "/interactive/heights-murders/"
 ---
@@ -23,7 +23,9 @@ items:
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta content="charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ "/css/selena.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -35,7 +37,7 @@ items:
     {% include nav.html %}
 
 	<section id="content" role="main">
-		<div class="wrapper" style="padding-top: 65px; padding-left: 50px;">
+		<div class="wrapper gallery-wrapper">
 	
 			<h2>{{page.title}}</h2>
 			
@@ -70,6 +72,7 @@ items:
 <!-- jQuery -->    
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/js/retina.min.js"></script>
 <!-- include Masonry -->
 <script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 

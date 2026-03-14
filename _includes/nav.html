@@ -1,5 +1,63 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="margin-right:1em; z-index: 1;">
+<style>
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-style: none;
+  text-align: right;
+}
+.navbar-custom .container-fluid {
+  padding-right: 0;
+}
+.navbar-custom .navbar-header {
+  padding-right: 0;
+}
+.navbar-custom .navbar-toggle .fa {
+  color: white;
+  font-size: 22px;
+}
+#bs-example-navbar-collapse-1 li a {
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .navbar-custom .navbar-toggle {
+    margin-right: 0;
+    padding: 10px;
+    float: none;
+    border-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav.navbar-nav.navbar-right,
+  .nav.navbar-nav.navbar-left {
+    width: 100%;
+    float: none !important;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+  #bs-example-navbar-collapse-1 li {
+    float: none !important;
+    text-align: right;
+  }
+  #bs-example-navbar-collapse-1 li a {
+    padding-left: 4.5%;
+    padding-right: 4.5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  body.gallery #content {
+    padding-top: 0 !important;
+  }
+  body.gallery .gallery-wrapper {
+    padding-top: 30px !important;
+  }
+  .masonry-gallery .gallery-item {
+    margin-bottom: 10px !important;
+  }
+}
+</style>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -30,7 +88,7 @@
             {% endif %}
           {% endfor %}
         {% endfor %}
-                            </ul>
+            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>

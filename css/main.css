@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #000;
   background-color: #fff;
 }
@@ -55,24 +55,42 @@ hr.small {
   width: 100%;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   min-height: 60px;
+  z-index: 1000;
 }
 .navbar-custom .navbar-nav.navbar-right {
   margin-top: 15px;
   padding-top: 0;
 }
-.navbar-custom .navbar-nav.navbar-left {
-  margin-top: 15px;
-  padding-top: 0;
-}
-.navbar-custom .navbar-nav.navbar-left li a {
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 30px;
-}
 .navbar-custom .navbar-nav.navbar-right li a {
   padding-top: 0;
   padding-bottom: 0;
   line-height: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .navbar-custom {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+  }
+  .navbar-custom .navbar-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar-custom .navbar-collapse {
+    background-color: transparent;
+    border-top: none;
+  }
+  .navbar-custom .navbar-nav.navbar-right {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-style: none;
+  text-align: right;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -142,7 +160,7 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
-    border-bottom: 1px solid transparent;
+    border: none;
   }
   .navbar-custom .navbar-brand {
     color: white;

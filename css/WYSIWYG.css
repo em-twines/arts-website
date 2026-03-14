@@ -122,23 +122,31 @@ body.fullscreen #footer {
     position: absolute;
     display: block;
     bottom: 0;
-    padding-bottom: 3.5em;
+    left: 0;
     right: 0;
     z-index: 3;
     color: white;
     text-align: right;
-    padding: 2em 4.5% 0;
+    padding: 2em 15px 0 0;
 }
 
 
 #footer {  -webkit-transition: -webkit-transform 0.35s; transition: transform 0.35s; }
 
+@media screen and (max-width: 767px) {
+  body.fullscreen #footer {
+    left: 0;
+    text-align: left;
+    padding: 2em 40px 0 4.5%;
+  }
+}
 
 
 
-ul.soc-icons { list-style: none; display: inline-block; vertical-align: top; padding: 0 0 1.5em  .5em; line-height: 1.1; position: relative; z-index: 99; }
+
+ul.soc-icons { list-style: none; display: inline-block; vertical-align: top; padding: 0 25px 0 0; line-height: 1.1; position: relative; z-index: 99; }
 ul.soc-icons::after { content: ""; display: block; clear: both; }
-ul.soc-icons li { display: inline-block; padding: 0 0 0 1em; font-size: 1.5em; }
+ul.soc-icons li { display: inline-block; padding: 0 25px 0 0; font-size: 1.5em; }
 ul.soc-icons li a { text-decoration: none !important;}
 ul.soc-icons li a:hover i { color: #000;
 	-moz-animation: spinHorizontal .5s linear;
