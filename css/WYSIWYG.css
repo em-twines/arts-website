@@ -134,6 +134,9 @@ body.fullscreen #footer {
 #footer {  -webkit-transition: -webkit-transform 0.35s; transition: transform 0.35s; }
 
 @media screen and (max-width: 767px) {
+  body.fullscreen .position-absolute {
+    padding-bottom: 80px;
+  }
   body.fullscreen #footer {
     left: 0;
     text-align: left;
