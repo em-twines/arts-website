@@ -1,7 +1,7 @@
 # Site settings
-title: Portfolio
+title: Emily Delbridge
 email: ""
-description: "Photo Journal"
+description: "Interdisciplinary performance and technology artist, writer, and software engineer"
 url: "https://em-twines.github.io"
 baseurl: "/arts-website"
 facebook_username: ""
@@ -18,7 +18,7 @@ owner:
   name: Emily Delbridge
   avatar: emily-twines-profile.png
   favicon: favicon.ico
-  info: An artist's portfoio website
+  info: An artist's portfolio website
 
 # Settings for comments helper
 # Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
@@ -54,13 +54,6 @@ port:             	 4000
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 5
-paginate_path: "/journal/page:num/"
-permalink: "/journal/:title/"
-categories_path: "/journal/category/"
-tags_path: "/journal/tag/"
-gems: 
- - jekyll-paginate
 exclude: ["README.md"]
 
 # SiteMap

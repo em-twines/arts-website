@@ -25,6 +25,18 @@ items:
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }} - {{ site.title }}</title>
+	<meta name="description" content="{{ page.description }}">
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/emily-twines-profile.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ page.title }} - {{ site.title }}">
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/img/emily-twines-profile.png">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ "/css/selena.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">

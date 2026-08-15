@@ -2,39 +2,30 @@
 layout: home
 main-title: "Emily Delbridge"
 subtitle: "Portfolio"
-description: ""
 images:
   - image_path: /img/on_progress.webp
     gallery-folder: /img/
+    title: "'On Progress' With Professor Stewart Orwell Teric III"
   - image_path: /img/kai_looking_glass.webp
     gallery-folder: /img/
+    title: "lookingGlass"
   - image_path: /img/the_house_snapshot2.webp
     gallery-folder: /img/
+    title: "The House"
   - image_path: /img/anthalion_angel.webp
     gallery-folder: /img/
+    title: "Anthelion"
   - image_path: /img/weeksville_snapshot.webp
     gallery-folder: /img/
+    title: "I heard an echo"
   - image_path: /img/dark-around-us.webp
     gallery-folder: /img/
+    title: "The Dark Around Us, Come"
   - image_path: /img/THM.webp
     gallery-folder: /img/
+    title: "The Heights Murders"
 ---
 
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS -->
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
-
-  <!-- Modernizr -->
-  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
-</head>
-
-<body class="fullscreen">
   <!-- MAIN CONTENT SECTION  _____________________________________________-->
   <section id="content" role="main">
     <div class="wrapper">
@@ -55,7 +46,7 @@ images:
           <figure class="gallery-item">
             <header class="gallery-icon">
               <a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
-                <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}">
+                <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" alt="{{ image.title }}">
               </a>
             </header>  
           </figure>
@@ -69,12 +60,12 @@ images:
   <div id="footer" role="contentinfo">
     <ul class="soc-icons">
       <li>
-        <a href="https://instagram.com/emily.twines" style="color:#dddddd;" target="_blank" title="Instagram">
+        <a href="https://instagram.com/emily.twines" style="color:#dddddd;" target="_blank" rel="noopener noreferrer" title="Instagram">
           <i class="fa fa-instagram"></i>
         </a>
       </li>
       <li>
-        <a href="https://github.com/em-twines/" style="color:#dddddd;" target="_blank" title="Github">
+        <a href="https://github.com/em-twines/" style="color:#dddddd;" target="_blank" rel="noopener noreferrer" title="Github">
           <i class="fa fa-github"></i>
         </a>
       </li>
@@ -97,6 +88,3 @@ images:
   <script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
   <!-- include custom script -->
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
-
-</body>
-</html>
